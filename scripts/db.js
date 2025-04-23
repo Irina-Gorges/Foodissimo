@@ -17,6 +17,17 @@ let meals = [
         description:
             "Der schmeckt immer: Genieße ein Brioche Bun mit saftigem Rindfleisch (125g / 250g) und schmelzenden Cheese, mit würzigen Zwiebeln, sauren Gurken, knackigem Salat sowie Ketchup und Mayonnaise.",
     },
+    {
+        name: "Gemischter Salat",
+        price: 7.9,
+        description:
+            "Einen gemischten Salat bestehend aus, Eisbergsalat, Tomaten, Gurken, Zwiebeln, Mais & Ei",
+    },
+    {
+        name: "Spaghetti Carbonara",
+        price: 9.0,
+        description: "Spaghetti Carbonara mit Schinken, Ei & Sahnesauce",
+    },
 ];
 
 // image source noch hinzufügen
