@@ -3,11 +3,9 @@ function init() {
 }
 
 function renderMeals() {
-    const meals = document.getElementById("content");
+    const contentRef = document.getElementById("food_container");
     contentRef.innerHTML = "";
-    for (let i = 0; i < meals.length; i++);
-    {
+    for (let i = 0; i < meals.length; i++) {
         contentRef.innerHTML += getMealsTemplate(i);
     }
 }
-

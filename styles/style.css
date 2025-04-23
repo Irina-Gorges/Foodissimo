@@ -41,8 +41,6 @@ header {
         background-color: rgb(247, 244, 232);
         filter: drop-shadow(2px 0px 3px #00000041);
 
-        
-
         .title {
             width: 100%;
             height: 300px;
@@ -64,10 +62,18 @@ header {
             h3 {
                 margin-top: 16px;
             }
+        }
+        .mealscontainer {
+            width: 100%;
+            height: 100dvh;
 
-            .mealscontainer {
-                width: 80%;
-                height: 80px;
+            .foodcont {
+                width: 100%;
+                height: 100dvh;
+            }
+            .food_photo {
+                width: 50px;
+                height: 50px;
             }
         }
     }

@@ -6,10 +6,11 @@
         <title>Foodissimo</title>
         <link rel="stylesheet" href="styles/style.css" />
         <script src="scripts/db.js"></script>
+        <script src="scripts/template.js"></script>
         <script src="scripts/script.js"></script>
         <link rel="shortcut icon" href="img/favicon.png" type="img/x-icon" />
     </head>
-    <body onload="init">
+    <body onload="init()">
         <header>
             <img class="logo" src="img/logo_food_transp.png" alt="Foodissimo" />
             <img src="img/menu-regular-48.png" alt="" />
@@ -24,10 +25,11 @@
                         alt=""
                     />
                     <div class="restaurant">
-                        <h3>Pizza Domino</h3>
+                        <h3>Pizzeria Domino</h3>
                         <p>Bewertung (4,7 von 5 Sternen)</p>
                     </div>
                 </section>
+                <section id="food_container" class="foodcont"></section>
                 <section id="basket_wrapper" class="basket_container">
                     <div class="basket">
                         <h1>Warenkorb</h1>
@@ -43,8 +45,7 @@
                     >Datenschutzerklärung</a
                 >
             </div>
-                <p>&COPY; Foodissimo 2025</p>
-            
+            <p>&COPY; Foodissimo 2025</p>
         </footer>
     </body>
 </html>
