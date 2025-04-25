@@ -1,23 +1,24 @@
 function init() {
-    renderMeals();
+  renderMeals();
 }
 
 function renderMeals() {
-    const contentRef = document.getElementById("food_container");
-    contentRef.innerHTML = "";
-    for (let i = 0; i < meals.length; i++) {
-        contentRef.innerHTML += getMealsTemplate(i);
-    }
+  const contentRef = document.getElementById("food_container");
+  contentRef.innerHTML = "";
+  for (let i = 0; i < meals.length; i++) {
+    contentRef.innerHTML += getMealsTemplate(i);
+  }
 }
 
-function addToCart() {
-    let cartContRef = document.getElementById(`mealscontent${i}`);
+function addToCard(i) {
+  let cardContRef = document.getElementById("basket");
+  if (document.getElementById(`${meals[i].name}`)) {
+  } else {
+    cardContRef.innerHTML += addToCardTemplate(i);
+  }
 }
 
-function renderMealsContent(i) {
-    let mealsRef = document.getElementById(`mealscontent${i}`);
-    mealsRef.innerHTML = getMealsTemplate(i);
-}
+
 // Optional: Gerichte Slider hinzufügen
 // Funktion zum Essen zum Warenkorb hinzufügen
 // Funktion zum Essen aus dem Warenkorb entfernen
@@ -26,3 +27,4 @@ function renderMealsContent(i) {
 // Funktion zum Essen im Warenkorb preis berechnen
 // Funktion zum Essen im Warenkorb preis anzeigen
 // Optional: Lieferkosten berechnen
+ 

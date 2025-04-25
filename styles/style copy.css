@@ -30,14 +30,14 @@ header {
     height: auto;
 }
 
-#content_Wrapper {
+#content_wrapper {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
     height: auto;
     overflow: hidden;
 
-    .content_Container {
+    .content_container {
         width: calc(100% - 300px);
         background-color: rgb(247, 244, 232);
         filter: drop-shadow(2px 0px 3px #00000041);
@@ -48,7 +48,7 @@ header {
             object-fit: cover;
         }
 
-        .photo_Restaurant {
+        .photo_restaurant {
             position: absolute;
             left: 45%;
             top: 250px;
@@ -64,12 +64,12 @@ header {
             margin-bottom: 32px;
         }
 
-        .foodCont {
+        .foodcont {
             width: 100%;
             height: 100dvh;
             padding: 0 60px;
 
-            .mealsContainer {
+            .mealscontainer {
                 width: 100%;
                 height: 140px;
                 font-size: 14px;
@@ -81,31 +81,31 @@ header {
                 background-color: rgb(255, 255, 255);
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-                .food_Photo {
+                .food_photo {
                     width: 90px;
                     height: 120px;
                     object-fit: cover;
                     border-radius: 10px;
                 }
 
-                #info_Meal {
+                #info_meal {
                     width: 90%;
                     margin-left: 12px;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-evenly;
 
-                    .nameMeal {
+                    .namemeal {
                         font-size: 18px;
                         font-weight: 500;
                     }
 
-                    .priceMeal {
+                    .pricemeal {
                         font-size: 20px;
                         font-weight: 500;
                     }
 
-                    #descriptionMeal {
+                    #descriptionmeal {
                         overflow: hidden;
                         flex-direction: row;
                     }
@@ -131,7 +131,7 @@ header {
         }
     }
 
-    .basket_Container {
+    .basket_container {
         width: 300px;
         flex-grow: 1;
         filter: drop-shadow(0px 2px 3px #00000041);
@@ -147,7 +147,7 @@ header {
             flex-direction: row;
             justify-content: space-evenly;
 
-            .priceMealW {
+            .pricemealW {
                 font-size: 20px;
                 font-weight: 500;
             }
@@ -177,14 +177,15 @@ header {
             padding: 16px;
             top: 0;
 
-            .info_MealW {
+            .info_mealW {
                 width: 90%;
                 margin-left: 12px;
             }
         }
-        .nameMealW {
+        .namemealW {
             font-size: 18px;
             font-weight: 500;
+            margin-bottom: 16px;
         }
     }
 }
@@ -198,7 +199,7 @@ footer {
     align-items: center;
     background-color: rgb(233, 224, 207);
 
-    .footer_Content {
+    .footer_content {
         display: flex;
         gap: 30px;
 
