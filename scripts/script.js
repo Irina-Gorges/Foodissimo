@@ -14,6 +14,7 @@ function renderMeals() {
 function addToCard(i) {
     let cardContRef = document.getElementById("basket");
     if (document.getElementById(`${meals[i].name}`)) {
+        calculatePrice("+", i);
     } else {
         saveToLocalStorage(i, meals[i].price, 1);
         calculateTotalPrice();
@@ -32,64 +33,70 @@ function removeFromCard(i) {
 }
 
 function calculatePrice(w, i) {
-    let multiplierTemplateRef = document.getElementById(`multiplier${i}`);
-    let priceTemplateRef = document.getElementById(`price_Meal${i}`);
     let localRef = JSON.parse(localStorage.getItem(i));
     let multiWert = parseInt(localRef[1]);
     let priceWert = parseFloat(localRef[0]);
 
-    switch (w) {
-        case "-":
-            if (multiWert > 1) {
-                saveToLocalStorage(
-                    i,
-                    (priceWert - meals[i].price).toFixed(2),
-                    multiWert - 1
-                );
-                calculateTotalPrice();
-                renderToCard();
-            }
+    switchFunction(w, i, multiWert, priceWert);
+    calculateTotalPrice();
+    renderToCard();
+    // switch (w) {
+    //     case "-":
+    //         if (multiWert > 1) {
+    //             saveToLocalStorage(
+    //                 i,
+    //                 (priceWert - meals[i].price).toFixed(2),
+    //                 multiWert - 1
+    //             );
+    //             calculateTotalPrice();
+    //             renderToCard();
+    //         } else {
+    //             removeFromCard(i);
+    //             calculateTotalPrice();
+    //             renderToCard();
+    //         }
 
-            break;
+    //         break;
 
-        case "+":
-            saveToLocalStorage(
-                i,
-                (priceWert + meals[i].price).toFixed(2),
-                multiWert + 1
-            );
-            calculateTotalPrice();
-            renderToCard();
-            break;
+    //     case "+":
+    //         saveToLocalStorage(
+    //             i,
+    //             (priceWert + meals[i].price).toFixed(2),
+    //             multiWert + 1
+    //         );
+    //         calculateTotalPrice();
+    //         renderToCard();
+    //         break;
 
-        default:
-            multiplierTemplateRef.innerHTML = "";
-            multiplierTemplateRef.innerHTML = 1;
-            calculateTotalPrice();
-            renderToCard();
-            break;
-    }
+    //     default:
+    //         multiplierTemplateRef.innerHTML = "";
+    //         multiplierTemplateRef.innerHTML = 1;
+    //         calculateTotalPrice();
+    //         renderToCard();
+    //         break;
+    // }
 }
 
 function calculateTotalPrice() {
     let totalPriceRef = document.getElementById("totalPrice");
-    let classMealPriceRef = document.getElementsByClassName("priceMealW");
-    let totalPrice = 0;
-    let localRef = [];
-    for (let z = 0; z < localStorage.length; z++) {
-        let localKeyRef = localStorage.key(z);
-        localRef.push(JSON.parse(localStorage.getItem(localKeyRef)));
-    }
-    for (let i = 0; i < localRef.length; i++) {
-        totalPrice += parseFloat(localRef[i][0]);
-    }
-    totalPriceRef.innerHTML = "";
-    totalPriceRef.innerHTML =
-        "Gesamtpreis: " +
-        parseFloat(totalPrice).toFixed(2) +
-        "&nbsp;€&nbsp;<button id='toPay' class='to_PayBtn' onclick='toPay()'>Bestellen</button>";
-    let toPayRef = document.getElementById("toPayFinal");
-    toPayRef.innerHTML = "";
+    // let classMealPriceRef = document.getElementsByClassName("priceMealW");
+    // let totalPrice = 0;
+    // let localRef = [];
+    // for (let z = 0; z < localStorage.length; z++) {
+    //     let localKeyRef = localStorage.key(z);
+    //     localRef.push(JSON.parse(localStorage.getItem(localKeyRef)));
+    // }
+    // for (let i = 0; i < localRef.length; i++) {
+    //     totalPrice += parseFloat(localRef[i][0]);
+    // }
+    // totalPriceRef.innerHTML = "";
+    // totalPriceRef.innerHTML =
+    //     "Gesamtpreis: " +
+    //     parseFloat(totalPrice).toFixed(2) +
+    //     "&nbsp;€&nbsp;<button id='toPay' class='to_PayBtn' onclick='toPay()'>Bestellen</button>";
+    // let toPayRef = document.getElementById("toPayFinal");
+    // toPayRef.innerHTML = "";
+    totalPriceTemplate(totalPriceRef);
 }
 
 function saveToLocalStorage(i, price, multiplier) {
@@ -113,13 +120,9 @@ function toPay() {
     let totalPriceRef = document.getElementById("totalPrice");
     let toPayRef = document.getElementById("toPayFinal");
     if (localStorage.length != 0) {
-        toPayRef.innerHTML = "Bestellung erfolgreich abgeschlossen!";
         localStorage.clear();
+        calculateTotalPrice();
         renderToCard();
-        totalPriceRef.innerHTML = "";
-    } else {
-        toPayRef.innerHTML = "";
-        toPayRef.innerHTML = "Der Warenkorb ist leer!";
     }
 }
 
