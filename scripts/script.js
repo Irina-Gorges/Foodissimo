@@ -126,4 +126,7 @@ function toPay() {
 function toggleCloseEvent() {
     let toggleRef = document.getElementById("basket_Wrapper");
     toggleRef.classList.toggle("d_none");
+
+    let contentRef = document.getElementById("content");
+    contentRef.classList.toggle("d_none");
 }

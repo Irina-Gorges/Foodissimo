@@ -28,6 +28,11 @@ header {
 .logo {
     width: 222px;
     height: auto;
+
+    @media (max-width: 360px) {
+        width: 170px;
+        height: auto;
+    }
 }
 
 #content_Wrapper {
@@ -39,8 +44,15 @@ header {
 
     .content_Container {
         width: 100%;
+        height: auto;
         background-color: rgb(247, 244, 232);
         filter: drop-shadow(2px 0px 3px #00000041);
+
+        @media (max-width: 768px) {
+            .d_none {
+                display: none;
+            }
+        }
 
         .title {
             width: 100%;
@@ -63,9 +75,13 @@ header {
             margin-top: 30px;
             margin-bottom: 32px;
 
-            @media screen and (max-width: 875px) {
+            @media (max-width: 875px) {
                 font-size: 14px;
                 margin-top: 55px;
+
+                @media (max-width: 330px) {
+                    font-size: 12px;
+                }
             }
         }
 
@@ -73,6 +89,10 @@ header {
             width: 100%;
             height: 100dvh;
             padding: 0 60px;
+
+            @media (max-width: 768px) {
+                padding: 0 12px;
+            }
 
             .mealsContainer {
                 width: 100%;
@@ -103,15 +123,27 @@ header {
                     .nameMeal {
                         font-size: 18px;
                         font-weight: 500;
+
+                        @media (max-width: 768px) {
+                            font-size: 14px;
+                        }
                     }
 
                     .priceMeal {
                         font-size: 20px;
                         font-weight: 500;
+
+                        @media (max-width: 768px) {
+                            font-size: 16px;
+                        }
                     }
 
-                    #descriptionMeal {
+                    .descriptionMeal {
                         flex-direction: row;
+
+                        @media (max-width: 768px) {
+                            font-size: 12px;
+                        }
                     }
                 }
 
@@ -139,11 +171,15 @@ header {
         width: 400px;
         height: 100dvh;
         top: 0;
-        flex-grow: 1;
         position: sticky;
 
         @media (max-width: 768px) {
-            
+            position: absolute;
+            width: 100%;
+            height: calc(100dvh - 80px);
+            left: 0;
+            z-index: 9;
+            background-color: rgb(255, 255, 255);
         }
 
         h1 {
@@ -153,21 +189,24 @@ header {
         }
     }
 
-
-    .d_none {
-      display: none;
-  }
-
+    @media (max-width: 768px) {
+        .d_none {
+            display: none;
+        }
+    }
 
     #calc {
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
         margin-bottom: 16px;
         margin-top: 16px;
+
+        @media (max-width: 768px) {
+        }
 
         button {
             width: 35px;
@@ -213,11 +252,13 @@ header {
     .total_Price {
         display: flex;
         justify-content: center;
+        align-items: center;
         font-size: 16px;
         font-weight: 500;
         margin-top: 20px;
         border-top: 2px solid rgba(213, 212, 212, 0.759);
         padding: 12px;
+        gap: 5px;
 
         .to_PayBtn {
             width: 100px;
@@ -240,8 +281,6 @@ header {
         justify-content: center;
     }
 }
-
-
 
 footer {
     width: 100%;
