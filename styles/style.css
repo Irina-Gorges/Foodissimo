@@ -1,248 +1,267 @@
 * {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
-  color: black;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    color: black;
 }
 
 body {
-  width: 100%;
-  height: 100dvh;
+    width: 100%;
+    height: 100dvh;
 }
 
 header {
-  width: 100%;
-  height: 80px;
-  background-color: #ffffff;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .logo {
-  width: 222px;
-  height: auto;
+    width: 222px;
+    height: auto;
 }
 
 #content_Wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  height: auto;
-  _overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    height: auto;
 
-  .content_Container {
-    width: calc(100% - 300px);
-    background-color: rgb(247, 244, 232);
-    filter: drop-shadow(2px 0px 3px #00000041);
-
-    .title {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
-
-    .photo_Restaurant {
-      position: absolute;
-      left: 45%;
-      top: 250px;
-      width: 100px;
-      border-radius: 50%;
-      filter: drop-shadow(0 0 0.25rem rgb(24, 24, 24));
-    }
-
-    .restaurant {
-      font-size: 20px;
-      padding: 0 60px;
-      margin-top: 30px;
-      margin-bottom: 32px;
-    }
-
-    .foodCont {
-      width: 100%;
-      height: 100dvh;
-      padding: 0 60px;
-
-      .mealsContainer {
+    .content_Container {
         width: 100%;
-        height: 140px;
-        font-size: 14px;
-        padding: 10px;
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 16px;
-        border-radius: 10px;
-        background-color: rgb(255, 255, 255);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background-color: rgb(247, 244, 232);
+        filter: drop-shadow(2px 0px 3px #00000041);
 
-        .food_Photo {
-          width: 90px;
-          height: 120px;
-          object-fit: cover;
-          border-radius: 10px;
+        .title {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
         }
 
-        #info_Meal {
-          width: 90%;
-          margin-left: 12px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
+        .photo_Restaurant {
+            position: absolute;
+            left: 45%;
+            top: 250px;
+            width: 100px;
+            border-radius: 50%;
+            filter: drop-shadow(0 0 0.25rem rgb(24, 24, 24));
+        }
 
-          .nameMeal {
-            font-size: 18px;
-            font-weight: 500;
-          }
-
-          .priceMeal {
+        .restaurant {
             font-size: 20px;
-            font-weight: 500;
-          }
+            padding: 0 60px;
+            margin-top: 30px;
+            margin-bottom: 32px;
 
-          #descriptionMeal {
-            _overflow: hidden;
-            flex-direction: row;
-          }
+            @media screen and (max-width: 875px) {
+                font-size: 14px;
+                margin-top: 55px;
+            }
         }
 
-        button {
-          position: absolute;
-          right: 10px;
-          width: 35px;
-          height: 35px;
-          border-radius: 50%;
-          border: 2px solid rgba(213, 212, 212, 0.759);
-          background-color: rgb(255, 255, 255);
-          cursor: pointer;
-          font-size: 28px;
-          color: rgb(229, 156, 22);
+        .foodCont {
+            width: 100%;
+            height: 100dvh;
+            padding: 0 60px;
 
-          &:hover {
-            background-color: rgb(243, 243, 243);
-          }
+            .mealsContainer {
+                width: 100%;
+                height: 140px;
+                font-size: 14px;
+                padding: 10px;
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 16px;
+                border-radius: 10px;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+                .food_Photo {
+                    width: 90px;
+                    height: 120px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+
+                #info_Meal {
+                    width: 90%;
+                    margin-left: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+
+                    .nameMeal {
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+
+                    .priceMeal {
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+
+                    #descriptionMeal {
+                        flex-direction: row;
+                    }
+                }
+
+                button {
+                    position: absolute;
+                    right: 10px;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    border: 2px solid rgba(213, 212, 212, 0.759);
+                    background-color: rgb(255, 255, 255);
+                    cursor: pointer;
+                    font-size: 28px;
+                    color: rgb(229, 156, 22);
+
+                    &:hover {
+                        background-color: rgb(243, 243, 243);
+                    }
+                }
+            }
         }
-      }
     }
+
+    #basket_Wrapper {
+        width: 400px;
+        height: 100dvh;
+        top: 0;
+        flex-grow: 1;
+        position: sticky;
+
+        @media (max-width: 768px) {
+            
+        }
+
+        h1 {
+            width: 100%;
+            text-align: center;
+            margin-top: 16px;
+        }
+    }
+
+
+    .d_none {
+      display: none;
   }
 
-  #basket_Wrapper {
-    width: 300px;
-    height: 100dvh;
-    top: 0;
-    flex-grow: 1;
-    position: sticky;
-
-    h1 {
-      margin-top: 16px;
-      left: 90px;
-    }
 
     #calc {
-      width: 100%;
-      height: auto;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
-      margin-bottom: 16px;
-      margin-top: 16px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 16px;
+        margin-top: 16px;
 
-      button {
-        width: 35px;
-        height: 35px;
-        display: inline-block;
-        border-radius: 50%;
-        border: 2px solid rgba(213, 212, 212, 0.759);
-        background-color: rgb(255, 255, 255);
-        cursor: pointer;
-        font-size: 22px;
-        color: rgb(229, 156, 22);
+        button {
+            width: 35px;
+            height: 35px;
+            display: inline-block;
+            border-radius: 50%;
+            border: 2px solid rgba(213, 212, 212, 0.759);
+            background-color: rgb(255, 255, 255);
+            cursor: pointer;
+            font-size: 22px;
+            color: rgb(229, 156, 22);
 
-        :hover {
-          background-color: rgb(243, 243, 243);
+            :hover {
+                background-color: rgb(243, 243, 243);
+            }
         }
-      }
     }
 
     #basket {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
 
-      padding: 16px;
-      top: 0;
+        padding: 16px;
+        top: 0;
 
-      .info_MealW {
-        font-size: 16px;
-        width: 90%;
-        margin-left: 12px;
-      }
+        .info_MealW {
+            font-size: 16px;
+            width: 90%;
+            margin-left: 12px;
+        }
     }
 
     .nameMealW {
-      font-size: 16px;
-      font-weight: 500;
-      border-top: 1px solid rgba(213, 212, 212, 0.759);
+        font-size: 16px;
+        font-weight: 500;
+        border-top: 1px solid rgba(213, 212, 212, 0.759);
     }
 
     .total_Price {
-      font-size: 16px;
-      font-weight: 500;
-      margin-top: 20px;
-      border-top: 2px solid rgba(213, 212, 212, 0.759);
-      padding: 16px;
-    }
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 20px;
+        border-top: 2px solid rgba(213, 212, 212, 0.759);
+        padding: 12px;
 
-    .to_PayBtn {
-      width: 110px;
-      height: 30px;
-      border-radius: 10px;
-      border: 2px solid rgba(213, 212, 212, 0.759);
-      background-color: rgb(255, 255, 255);
-      cursor: pointer;
-      font-size: 16px;
-      color: rgb(229, 156, 22);
-    }
+        .to_PayBtn {
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;
+            border: 2px solid rgba(213, 212, 212, 0.759);
+            background-color: rgb(255, 255, 255);
+            cursor: pointer;
+            font-size: 16px;
+            color: rgb(229, 156, 22);
+        }
 
-    .to_PayBtn:hover {
-      background-color: rgb(243, 243, 243);
+        .to_PayBtn:hover {
+            background-color: rgb(243, 243, 243);
+        }
     }
 
     .to_PayFinal {
-      display: flex;
-      justify-content: center;
+        display: flex;
+        justify-content: center;
     }
-  }
 }
 
+
+
 footer {
-  width: 100%;
-  height: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(233, 224, 207);
-
-  .footer_Content {
+    width: 100%;
+    height: 80px;
     display: flex;
-    gap: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(233, 224, 207);
 
-    a {
-      text-decoration: none;
+    .footer_Content {
+        display: flex;
+        gap: 30px;
+
+        a {
+            text-decoration: none;
+        }
     }
-  }
-  p {
-    margin-top: 5px;
-    font-weight: 600;
-  }
+    p {
+        margin-top: 5px;
+        font-weight: 600;
+    }
 }

@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foodissimo</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <script src="scripts/db.js"></script>
-    <script src="scripts/template.js"></script>
-    <script src="scripts/script.js"></script>
-    <link rel="shortcut icon" href="img/favicon.png" type="img/x-icon" />
-  </head>
-  <body onload="init()">
-    <header>
-      <img class="logo" src="img/logo_food_transp.png" alt="Foodissimo" />
-      <img src="img/menu-regular-48.png" alt="" />
-    </header>
-    <main>
-      <div id="content_Wrapper">
-        <section id="content" class="content_Container">
-          <img class="title" src="img/titelbild_res.png" alt="" />
-          <img class="photo_Restaurant" src="img/logo_domino.png" alt="" />
-          <div class="restaurant">
-            <h3>Pizzeria Domino</h3>
-            <p>Bewertung (4,7 von 5 Sternen)</p>
-          </div>
-          <section id="food_Container" class="foodCont"></section>
-        </section>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Foodissimo</title>
+        <link rel="stylesheet" href="styles/style.css" />
+        <script src="scripts/db.js"></script>
+        <script src="scripts/template.js"></script>
 
-        <section id="basket_Wrapper" class="basket_Container">
-          <h1>Warenkorb</h1>
-          <div id="basket"></div>
-          <div id="totalPrice" class="total_Price"></div>
-          <div id="toPayFinal" class="to_PayFinal"></div>
-        </section>
-      </div>
-    </main>
+        <link rel="shortcut icon" href="img/favicon.png" type="img/x-icon" />
+    </head>
+    <body onload="init()">
+        <header>
+            <img class="logo" src="img/logo_food_transp.png" alt="Foodissimo" />
+            <img
+                src="img/menu-regular-48.png"
+                class="menu_btn"
+                onclick="toggleCloseEvent()"
+                alt=""
+            />
+        </header>
+        <main>
+            <div id="content_Wrapper">
+                <section id="content" class="content_Container">
+                    <img class="title" src="img/titelbild_res.png" alt="" />
+                    <img
+                        class="photo_Restaurant"
+                        src="img/logo_domino.png"
+                        alt=""
+                    />
+                    <div class="restaurant">
+                        <h3>Pizzeria Domino</h3>
+                        <p>Bewertung (4,7 von 5 Sternen)</p>
+                    </div>
+                    <section id="food_Container" class="foodCont"></section>
+                </section>
 
-    <footer>
-      <div class="footer_Content">
-        <a href="impressum.html" target="_blank">Impressum</a>
-        <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a>
-      </div>
-      <p>&COPY; Foodissimo 2025</p>
-    </footer>
-  </body>
+                <section id="basket_Wrapper" class="basket_Container d_none">
+                    <h1>Warenkorb</h1>
+                    <div id="basket"></div>
+                    <div id="totalPrice" class="total_Price"></div>
+                    <div id="toPayFinal" class="to_PayFinal"></div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer_Content">
+                <a href="impressum.html" target="_blank">Impressum</a>
+                <a href="datenschutz.html" target="_blank"
+                    >Datenschutzerklärung</a
+                >
+            </div>
+            <p>&COPY; Foodissimo 2025</p>
+        </footer>
+        <script src="scripts/script.js"></script>
+    </body>
 </html>
