@@ -38,7 +38,6 @@ header {
     width: 100%;
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
     height: auto;
 
     .content_Container {
@@ -75,11 +74,11 @@ header {
             margin-bottom: 32px;
 
             @media (max-width: 875px) {
-                font-size: 14px;
+                font-size: 18px;
                 margin-top: 55px;
 
                 @media (max-width: 330px) {
-                    font-size: 12px;
+                    font-size: 16px;
                 }
             }
         }
@@ -96,7 +95,7 @@ header {
             .mealsContainer {
                 width: 100%;
                 height: 140px;
-                font-size: 14px;
+                font-size: 16px;
                 padding: 10px;
                 display: flex;
                 flex-direction: row;
@@ -124,7 +123,7 @@ header {
                         font-weight: 500;
 
                         @media (max-width: 768px) {
-                            font-size: 14px;
+                            font-size: 16px;
                         }
                     }
 
@@ -139,9 +138,13 @@ header {
 
                     .descriptionMeal {
                         flex-direction: row;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
 
                         @media (max-width: 768px) {
-                            font-size: 12px;
+                            font-size: 16px;
                         }
                     }
                 }
@@ -168,7 +171,7 @@ header {
 
     #basket_Wrapper {
         width: 400px;
-        height: 100dvh;
+        height: 90dvh;
         top: 0;
         position: sticky;
 
@@ -260,7 +263,7 @@ header {
         gap: 5px;
 
         @media (max-width: 1025px) {
-            font-size: 14px;
+            font-size: 16px;
         }
 
         .to_PayBtn {
@@ -274,7 +277,7 @@ header {
             color: rgb(229, 156, 22);
 
             @media (max-width: 1025px) {
-                font-size: 14px;
+                font-size: 16px;
                 width: 90px;
             }
         }
